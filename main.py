@@ -1,19 +1,10 @@
 import json
-import sys
-from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
 
 app = FastAPI()
 with open("levels.json", 'r+') as file:
     database = json.load(file)
-
-l = Path("levels.json")
-if l.exists():
-    print("Database exists")
-else:
-    print("ERROR: Database doesn't exist!")
-
 
 @app.get("/")
 def levellist():
