@@ -4,7 +4,7 @@ from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
 
-api = FastAPI()
+app = FastAPI()
 
 l = Path("levels.json")
 if l.exists():
@@ -16,12 +16,12 @@ with open("levels.json", 'r+') as file:
     database = json.load(file)
 
 
-@api.get("/")
+@app.get("/")
 def levellist():
     return list(database.keys())
 
 
-@api.get("/level/{level}")
+@app.get("/level/{level}")
 def findlevel(level: str):
     if level not in database:
         raise HTTPException(status_code=404, detail="Level not found")
