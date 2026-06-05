@@ -1,9 +1,14 @@
 import json
+from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
 
 app = FastAPI()
-with open("levels.json", 'r+') as file:
+
+BASE_DIR = Path(__file__).resolve().parent
+LEVELS_FILE = BASE_DIR / "levels.json"
+
+with LEVELS_FILE.open("r", encoding="utf-8") as file:
     database = json.load(file)
 
 @app.get("/")
