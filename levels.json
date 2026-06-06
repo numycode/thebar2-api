@@ -2,11 +2,13 @@
   "is-level1": {
     "author": "numycode",
     "description": "My first level! Decently easy.",
-    "data": "data!!!"
+    "data_img": "data!!!",
+    "data_hitbox": "hitbox data!!!"
   },
   "b": {
     "author": "fluffycat",
     "description": "The best level!!! :)",
-    "data": "the best data!!!"
+    "data_img": "the best data!!!",
+    "data_hitbox": "the best hitbox data!!!"
   }
 }
