@@ -1,4 +1,5 @@
 # theBAR2-api
+[![CodeQL Advanced](https://github.com/numycode/thebar2-api/actions/workflows/codeql.yml/badge.svg)](https://github.com/numycode/thebar2-api/actions/workflows/codeql.yml)
 The API powering the level database in Py++ RW4 theBAR2.
 
 ## Add your level!
